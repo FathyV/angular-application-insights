@@ -9,7 +9,7 @@ export * from './src/app-insight.service';
 const routes: Routes = [];
 
 @NgModule({
-  imports: [ CommonModule, RouterModule.forRoot() ],
+  imports: [ CommonModule, RouterModule.forRoot(routes) ],
   declarations: [],
   exports: [],
   providers: [ AppInsightsService ]
