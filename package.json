@@ -1,6 +1,6 @@
 {
   "name": "@tovihung/ng-application-insights",
-  "version": "5.0.6",
+  "version": "5.0.9",
   "scripts": {
     "lint": "tslint -p tsconfig.json",
     "clean": "rimraf ./dist",
@@ -15,6 +15,7 @@
     "name": "To Vi Hung",
     "email": "hung.tovi@gmail.com"
   },
+  "license": "MIT",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "dependencies": {
@@ -22,6 +23,7 @@
     "@types/applicationinsights-js": "^1.0.5"
   },
   "peerDependencies": {
+    "@angular/router": "^6.0.0",
     "rxjs": "^6.1.0"
   },
   "devDependencies": {
@@ -31,6 +33,7 @@
     "@angular/compiler-cli": "^6.0.0",
     "@angular/core": "^6.0.0",
     "@angular/platform-browser": "^6.0.0",
+    "@angular/router": "^6.0.0",
     "codelyzer": "^3.1.2",
     "rimraf": "^2.5.4",
     "rxjs": "^6.1.0",
