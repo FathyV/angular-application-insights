@@ -1,6 +1,6 @@
 {
-  "name": "@markpieszak/ng-application-insights",
-  "version": "5.0.0",
+  "name": "@tovihung/ng-application-insights",
+  "version": "5.0.2",
   "scripts": {
     "lint": "tslint -p tsconfig.json",
     "clean": "rimraf ./dist",
@@ -9,24 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MarkPieszak/angular-application-insights"
+    "url": "https://github.com/FathyV/angular-application-insights"
   },
   "author": {
-    "name": "Mark Pieszak",
-    "email": "mpieszak84@gmail.com"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MarkPieszak/angular-application-insights/issues"
+    "name": "To Vi Hung",
+    "email": "hung.tovi@gmail.com"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "dependencies": {
     "applicationinsights-js": "^1.0.15",
-    "@types/applicationinsights-js": "^1.0.5"
+    "@types/applicationinsights-js": "^1.0.5",
+    "@angular/router": "^6.0.0"
   },
   "peerDependencies": {
-    "@angular/router": "^6.0.0",
     "rxjs": "^6.1.0"
   },
   "devDependencies": {
@@ -46,15 +42,5 @@
   },
   "engines": {
     "node": ">=6.0.0"
-  },
-  "keywords": [
-    "angular",
-    "angular2",
-    "ms application insights",
-    "application insights",
-    "angular application insights",
-    "microsoft application insights",
-    "ms app insights",
-    "aspnet core app insights"
-  ]
+  }
 }
