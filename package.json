@@ -1,6 +1,6 @@
 {
   "name": "@tovihung/ng-application-insights",
-  "version": "5.0.2",
+  "version": "5.0.4",
   "scripts": {
     "lint": "tslint -p tsconfig.json",
     "clean": "rimraf ./dist",

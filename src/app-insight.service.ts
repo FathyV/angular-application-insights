@@ -1,5 +1,4 @@
 import { Injectable, Optional } from '@angular/core';
-import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 import { AppInsights } from 'applicationinsights-js';
 import { filter } from 'rxjs/operators';
 
@@ -46,8 +45,7 @@ export class AppInsightsService implements IAppInsights {
   config: AppInsightsConfig;
 
   constructor(
-    @Optional() _config: AppInsightsConfig,
-    public router: Router
+    @Optional() _config: AppInsightsConfig
   ) {
     this.config = _config;
   }
@@ -216,23 +214,7 @@ export class AppInsightsService implements IAppInsights {
     if (this.config) {
       if (this.config.instrumentationKey) {
         try {
-          AppInsights.downloadAndSetup(this.config);
-
-          if (!this.config.overrideTrackPageMetrics) {
-            this.router.events.pipe(
-              filter(event => event instanceof NavigationStart)
-            )
-              .subscribe((event: NavigationStart) => {
-                this.startTrackPage(event.url);
-              });
-
-            this.router.events.pipe(
-              filter(event => event instanceof NavigationEnd)
-            )
-              .subscribe((event: NavigationEnd) => {
-                this.stopTrackPage(event.url);
-              });
-          }
+          AppInsights.downloadAndSetup(this.config);\
 
           this.queue = AppInsights.queue;
           this.context = AppInsights.context;
