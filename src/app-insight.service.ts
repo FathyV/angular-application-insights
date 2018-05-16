@@ -1,6 +1,5 @@
 import { Injectable, Optional } from '@angular/core';
 import { AppInsights } from 'applicationinsights-js';
-import { filter } from 'rxjs/operators';
 
 import IAppInsights = Microsoft.ApplicationInsights.IAppInsights;
 
@@ -214,7 +213,7 @@ export class AppInsightsService implements IAppInsights {
     if (this.config) {
       if (this.config.instrumentationKey) {
         try {
-          AppInsights.downloadAndSetup(this.config);\
+          AppInsights.downloadAndSetup(this.config);
 
           this.queue = AppInsights.queue;
           this.context = AppInsights.context;
