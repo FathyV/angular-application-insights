@@ -6,20 +6,20 @@ import { AppInsightsConfig, AppInsightsService } from './src/app-insight.service
 export * from './src/app-insight.service';
 
 @NgModule({
-  imports: [ CommonModule],
+  imports: [CommonModule],
   declarations: [],
   exports: [],
-  providers: [ AppInsightsService ]
+  providers: [AppInsightsService]
 })
 
 export class ApplicationInsightsModule {
 
-  constructor (
+  constructor(
     @Optional() @SkipSelf() parentModule: ApplicationInsightsModule,
     appInsightsService: AppInsightsService
   ) {
     if (!parentModule) {
-        appInsightsService.init();
+      appInsightsService.init();
     }
   }
 
